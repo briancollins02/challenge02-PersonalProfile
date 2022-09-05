@@ -1,19 +1,19 @@
 .menu-wrap {
-    position:absolute;
-
+    position: absolute;
+    right: 7px;
+    top: 7px
 }
-
 .menu-wrap .hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-around;
     align-items: center;
     width: 57px;
     height: 57px;
     background-color: #2D97FF;
     border-radius: 5px;
     border-width: 0px;
-    margin: 8px;
+    margin: 0px;
     z-index: 2;
 }
 
