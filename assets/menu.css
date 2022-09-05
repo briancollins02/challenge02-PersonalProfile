@@ -1,11 +1,12 @@
 .menu-wrap {
+    position:absolute;
 
 }
 
 .menu-wrap .hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: end;
     align-items: center;
     width: 57px;
     height: 57px;
