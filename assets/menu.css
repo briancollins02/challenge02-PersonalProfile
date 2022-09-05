@@ -1,7 +1,7 @@
 .menu-wrap {
     position: absolute;
-    right: 7px;
-    top: 7px
+    right: 0px;
+    top: 0px
 }
 .menu-wrap .hamburger {
     display: flex;
@@ -13,7 +13,7 @@
     background-color: #2D97FF;
     border-radius: 5px;
     border-width: 0px;
-    margin: 0px;
+    margin: 7px;
     z-index: 2;
 }
 
@@ -24,17 +24,20 @@
     border-radius: 4px;
     z-index: 1;
     transition: all 0.4s;
+    margin: 0px;
+    padding: 0px;
 }
 
 .menu-wrap .toggler {
     position: absolute;
-    top: 3px;
-    right: 3px;
+    margin: 0px;
+    top: 5px;
+    right: 5px;
     z-index: 2;
     cursor: pointer;
     width: 61px;
     height: 61px;
-    opacity: 0;
+    opacity: 25%;
 }
 
 /*animations*/
@@ -42,7 +45,7 @@
 /*Toggler animate*/
 
 .menu-wrap .toggler:checked + .hamburger > #top-line { 
-        transform: translate(0px, 16px) rotate(135deg) scale(1.2, 1);
+        transform: translate(0px, 18px) rotate(135deg) scale(1.2, 1);
         transition: 0.4s ease-out;
 }
 
@@ -55,6 +58,6 @@
 
 /*bottom-line*/
 .menu-wrap .toggler:checked + .hamburger > #bottom-line {
-    transform: translate(0px, -16px) rotate(-135deg) scale(1.2, 1);
+    transform: translate(0px, -18px) rotate(-135deg) scale(1.2, 1);
     transition: 0.4s ease-out;
 }
