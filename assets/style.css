@@ -53,6 +53,7 @@ header button {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     width: 57px;
     height: 57px;
     background-color: #2D97FF;
