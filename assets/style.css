@@ -1,0 +1,84 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+    font-family: Inter;
+    text-align: center;
+}
+body {
+    background-color: #5BDB94;
+}
+
+
+/*header*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 72px;
+    width: 100%;
+    background-color: #05396C;
+    position: fixed;
+    top: 0;
+    right:0;
+    left: 0;
+    margin: 0;
+}
+/*header box shadow*/
+header::after {
+    box-shadow: 0px 1px 10px #302446;
+    content:"";
+    height: 100%;
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+}
+
+
+h1 {
+    position: relative;
+    justify-content: start;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: 58px;
+    font-weight:550;
+    color: #5BDB94;
+}
+
+header button {
+    width: 57px;
+    height: 57px;
+    background-color: #2D97FF;
+    border-radius: 5px;
+    border-width: 0px;
+    margin: 8px;
+}
+
+header button div {
+    width: 45px;
+    height: 8px;
+    background-color: #05396C;
+    margin: 7px 0;
+    border-radius: 4px;
+}
+
+div {
+    height: 72px;
+    width: 100%;
+    display: hidden;
+}
+
+section {
+    margin: 24px;
+    height: 300px;
+    background-color: #05396C;
+    color:#5BDB94;
+    font-size: 1.5rem;
+    align-content: center;
+    padding:20%;
+    color:
+}
