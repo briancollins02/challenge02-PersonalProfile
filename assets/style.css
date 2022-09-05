@@ -49,29 +49,7 @@ h1 {
     color: #5BDB94;
 }
 
-header button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 57px;
-    height: 57px;
-    background-color: #2D97FF;
-    border-radius: 5px;
-    border-width: 0px;
-    margin: 8px;
-
-}
-
-header button div {
-    width: 45px;
-    height: 8px;
-    background-color: #05396C;
-    border-radius: 4px;
- 
-}
-
-div {
+#header {
     height: 72px;
     width: 100%;
     display: hidden;
