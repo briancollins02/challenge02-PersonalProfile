@@ -34,6 +34,7 @@ header::after {
     left: -50%;
     top: 0;
     width: 200%;
+    z-index: -1;
 }
 
 
@@ -46,10 +47,12 @@ h1 {
     color: #5BDB94;
 }
 
+/* Spacer to create margin between content and header*/
 #header {
     height: 72px;
     width: 100%;
     display: hidden;
+    margin: 10px
 }
 
 section {
@@ -60,5 +63,5 @@ section {
     font-size: 1.5rem;
     align-content: center;
     padding:20%;
-    color:
 }
+
