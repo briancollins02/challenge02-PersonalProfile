@@ -1,12 +1,17 @@
 .menu-wrap {
-    position: absolute;
-    right: 0px;
-    top: 0px
+    position: fixed;
+    right: 10px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    z-index: 999;
 }
+
 .menu-wrap .hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 57px;
     height: 57px;
@@ -15,6 +20,7 @@
     border-width: 0px;
     margin: 7px;
     z-index: 2;
+    transition: 0.2s ease-in-out;
 }
 
 .hamburger div {
@@ -23,7 +29,7 @@
     background-color: #05396C;
     border-radius: 4px;
     z-index: 1;
-    transition: all 0.4s;
+    transition: all 0.4s ease;
     margin: 0px;
     padding: 0px;
 }
@@ -37,27 +43,109 @@
     cursor: pointer;
     width: 61px;
     height: 61px;
-    opacity: 25%;
+    opacity: 0%;
 }
 
-/*animations*/
 
 /*Toggler animate*/
 
+    /* Top line */
 .menu-wrap .toggler:checked + .hamburger > #top-line { 
-        transform: translate(0px, 18px) rotate(135deg) scale(1.2, 1);
-        transition: 0.4s ease-out;
+        transform: translate(0px, 16px) rotate(135deg) scale(1.2, 1);
 }
 
-/*middle-line*/
+    /* Middle line */
 .menu-wrap .toggler:checked + .hamburger > #middle-line {
     transform: scale(0.1, 1);
-    transition: 0.4s ease;
 
 }
 
-/*bottom-line*/
+    /* Bottom line */
 .menu-wrap .toggler:checked + .hamburger > #bottom-line {
-    transform: translate(0px, -18px) rotate(-135deg) scale(1.2, 1);
-    transition: 0.4s ease-out;
+    transform: translate(0px, -16px) rotate(-135deg) scale(1.2, 1);
+}
+
+.menu-wrap .toggler:checked:hover + .hamburger{
+    box-shadow: 0px 0px 10px #235d84;
+}
+
+
+
+/* Interaction Show menu */
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.5s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease
+}
+
+/* Close Menu*/
+.menu-wrap {
+
+}
+
+
+/* Menu display */
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-wrap .menu > div {
+    background: #5BDB94;
+    border-radius: 50%;
+    width: 300vw;
+    height: 300vw;
+    overflow: hidden;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+
+/* Hide Hamburger if on large screen */
+@media all and (min-width: 1024px) {
+    .menu-wrap {
+        display: none;
+    }
 }
