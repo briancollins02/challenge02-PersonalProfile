@@ -7,7 +7,6 @@ html { font-family: 'Inter', sans-serif; }
 * {
     font-family: Inter;
     text-align: center;
-    overflow-x: hidden;
 }
 body {
     background-color: #5BDB94;
@@ -17,7 +16,6 @@ body {
 
 /*header*/
 header {
-    display: inline;
     height: 72px;
     width: 100%;
     background-color: #05396C;
@@ -27,6 +25,7 @@ header {
     left: 0;
     margin: 0;
 }
+
 /*header box shadow*/
 header::after {
     box-shadow: 0px 1px 10px #302446;
@@ -41,7 +40,7 @@ header::after {
 
 
 h1 {
-    height: 70px;
+    height: 72px;
     display: inline;
     position:absolute;
     left: 5px;
@@ -49,7 +48,7 @@ h1 {
     font-size: 58px;
     font-weight:550;
     color: #5BDB94;
-    z-index: 40;
+    z-index: 1;
 }
 
 /* Spacer to create margin between content and header*/
@@ -60,6 +59,7 @@ h1 {
     margin: 10px
 }
 
+
 section {
     margin: 0% 24px;
     height: 300px;
@@ -68,4 +68,5 @@ section {
     font-size: 1.5rem;
     align-content: center;
     padding:20%;
+    z-index: 1;
 }
