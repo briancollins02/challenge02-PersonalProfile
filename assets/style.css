@@ -11,6 +11,7 @@ html { font-family: 'Inter', sans-serif; }
 }
 body {
     background-color: #5BDB94;
+    position: relative;
 }
 
 
@@ -40,12 +41,15 @@ header::after {
 
 
 h1 {
+    height: 70px;
+    display: inline;
     position:absolute;
-    left:5px;
+    left: 5px;
     top: 5px;
     font-size: 58px;
     font-weight:550;
     color: #5BDB94;
+    z-index: 40;
 }
 
 /* Spacer to create margin between content and header*/
@@ -65,4 +69,3 @@ section {
     align-content: center;
     padding:20%;
 }
-
