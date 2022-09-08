@@ -1,7 +1,14 @@
 console.log("I'm connected!");
 
-// Enables touchstart for all elements, including ones not visible on load
-document.addEventListener("touchstart", function() {}, false); 
+var interaction = false;
+
+//let onclick turn off checkbox
+document.addEventListener('click', function() {
+    interaction = true;
+    console.log('interaction= ' ,interaction);
+
+})
+
 
 // Define Checkbox
 const checkbox = document.querySelector(".toggler");
@@ -14,9 +21,11 @@ const checkbox = document.querySelector(".toggler");
     console.log('focused: ', document.activeElement)
  }, true);
 
+
 // If menu open and nav is clicked, close menu
- document.addEventListener('focusin', function() {
-    if (navClick.activeElement = document.getElementsByClassName('nav-buttons')) {
+  document.addEventListener('focusin', function() {
+    if (interaction == true) {
         checkbox.checked  = false;
+        console.log('bozo');
     }
 });
