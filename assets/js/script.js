@@ -12,8 +12,6 @@ checkbox.checked = false;
 
 // listen for touch on navbuttons
 navButton.addEventListener('touchend', function() {
-    if (checkbox.checked = true) {
         checkbox.checked  = false;
         console.log('touchend');
-    }
 });
