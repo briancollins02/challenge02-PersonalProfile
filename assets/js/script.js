@@ -1,31 +1,19 @@
-console.log("I'm connected!");
-
-var interaction = false;
-
-//let onclick turn off checkbox
-document.addEventListener('click', function() {
-    interaction = true;
-    console.log('interaction= ' ,interaction);
-
-})
-
-
 // Define Checkbox
 const checkbox = document.querySelector(".toggler");
 
 // Tracks active element
- const navClick = document.activeElement;
+const navClick = document.activeElement;
 
-// Console log active element when clicked
- document.addEventListener('focusin', function() {
-    console.log('focused: ', document.activeElement)
- }, true);
+// Defines Nav buttons
+const navButton = document.getElementById('nav-buttons');
 
+// Uncheck Checkbox
+checkbox.checked = false;
 
-// If menu open and nav is clicked, close menu
-  document.addEventListener('focusin', function() {
-    if (interaction == true) {
+// listen for touch on navbuttons
+navButton.addEventListener('touchend', function() {
+    if (checkbox.checked = true) {
         checkbox.checked  = false;
-        console.log('bozo');
+        console.log('touchend');
     }
 });

@@ -87,10 +87,13 @@
 }
 
 /* Close Menu*/
-.menu-wrap {
-
+.toggler:checked {
+    pointer-events: none;
 }
 
+.toggler:not(:checked){
+    pointer-events: all;
+}
 
 /* Menu display */
 .menu-wrap .menu {
