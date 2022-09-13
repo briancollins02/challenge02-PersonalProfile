@@ -1,25 +1,37 @@
+/* Import fonts */
 @import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }
 
+/* Universal font and scroll*/
 * {
     font-family: Inter;
+    scroll-behavior: smooth;
 }
+
+/* Variables */
+ :root {
+    --primary-color: #5BDB94;
+    --secondary-color: #05396C;
+ }
+
+/* Setting up the background color */
 body {
-    background-color: #5BDB94;
+    background-color: var(--primary-color);
     position: relative;
 }
 
 
-/*header*/
+/* Header */
 header {
     display:flex;
+    justify-content:space-between;
     height: 144px;
     width: 150%;
     overflow-x: hidden;
-    background-color: #05396C;
+    background-color: var(--secondary-color);
     position: fixed;
     top: -72px;
     right:0;
@@ -28,7 +40,7 @@ header {
     z-index: 3;
 }
 
-/*header box shadow*/
+/* Header box shadow */
 header::after {
     box-shadow: 0px 1px 10px #302446;
     content:"";
@@ -36,15 +48,15 @@ header::after {
     overflow-x: hidden;
     position: absolute;
     left: -50%;
-    top: 0;
+    top: 100%;
     width: 200%;
-    z-index: -1;
+    z-index: 10;
 }
-
-
+    
+/* Header Title */
 h1 {
     height: 72px;
-    position: absolute;
+    position: relative;
     left: 5px;
     top: 77px;
     font-size: 58px;
@@ -53,30 +65,135 @@ h1 {
     z-index: 1;
 }
 
-/* Spacer to create margin between content and header*/
-#header {
-    height: 72px;
-    width: 100%;
-    display: hidden;
-    margin: 10px
+#desktop-nav {
+    position: fixed;
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: space-between;
+    width: 50%;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 2rem;
+    top: 20px;
+    right: 10px;
+    
+}
+ /* Turn off link underline */
+#desktop-nav li a {
+    text-decoration: none;
 }
 
+/* Spacer to create margin between content and header*/
+#load-up {
+    height: 100vh;
+    width: 100%;
+    display: hidden;
+    margin: 0px;
+    z-index: -999;
+}
+
+/* Main Content */
 main {
     position: relative;
 }
 
-main section {
-    display:block;
-    margin: 0% 24px 30px;
-    height: 300px;
-    background-color: #05396C;
-    color:#5BDB94;
-    font-size: 1.5rem;
-    align-content: center;
-    padding:20%;
-    z-index: 1;
+main:after {
+    content: url(/assets/images/background.jpg);
+    height: 100vh;
+    position:fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    align-self: center;
+    justify-content: center;
+    filter:grayscale(1);
+    opacity: 50%;
+    z-index: -1
 }
 
+/* Cards */
+main section {
+    overflow: hidden;
+    display:block;
+    margin: 0% 24px 30px 24px;
+    height: 300px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* card text */
 p {
-    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    z-index: 2;
+    font-size: 1.3rem
+}
+
+/* About me card */
+#picture {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+/* Card Headers */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Profile Picture*/
+#picture img {
+    align-self: center;
+    opacity: 40%;
+    width: 300px;
+    border-radius: 50%;
+    margin: 5%; 
+}
+
+
+#picture div p {
+    margin: 0 8% 8% 8%;
+
+}
+
+/* Make the anchor link the same color */
+a {
+    color: inherit;
+}
+
+/* Contact Card */
+#contact {
+    height: fit-content;
+}
+
+/* Email within contact bubble */
+#contact p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Contact Icons */
+#icons {
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+@media all and (min-width: 1024px) {
+
+    section {
+        margin: 0% 50px 30px 50px;
+    }
 }

@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
-    <script>
-        document.addEventListener("touchstart", function(){}, true);
-    </script>
     <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/7a68f3df4f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="menu-wrap">
@@ -24,8 +22,8 @@
             <div>
                 <div>
                     <ul id="nav-buttons">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#about">Home</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -35,20 +33,38 @@
     </div>
  <header>
     <h1>
-        MyName
+        Brian C
     </h1>
+    <ul id="desktop-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
  </header>
 
- <div id="header"></div>
-
+ <div id="load-up"></div>
+ <div id="background" src="./assets/images/background.jpg"></div>
 <main>
-    <section>
-        <p>words words words ...</p>
-        <p>ID has been named on the nav list</p>
+    <section id="picture">
+        <h2 class="header" id="about">About Me</h2>
+        <img src="./assets/images/Picture.jpg" alt="some bozo"> 
+        <div>
+            <p>Hey, I'm Brian! An aspiring web developer who recently moved out to the atlanta area. I'm looking to learn new skills and make <a href="#contact">new connections</a>. </p>
+        </div>
     </section>
     <section></section>
-    <section> 
-        <p id="contact">this is contact info</p>
+    <section  id="contact"> 
+        <h2 class="header">Contact</h2>
+        <p>brianmcollins0@gmail.com</p>
+        <div id="icons">
+            <a href="https://www.instagram.com/briammcollins/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href='https://mail.google.com/mail/u/0/?hl=en&view=cm&tf=1&fs=1&to=brianmcollins0@gmail.com'>
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
     </section>
 </main>
 
