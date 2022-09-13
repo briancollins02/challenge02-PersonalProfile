@@ -98,7 +98,7 @@ main {
 }
 
 main:after {
-    content: url(/assets/images/background.jpg);
+    content: url(../../assets/images/background.jpg);
     height: 100vh;
     position:fixed;
     margin: auto;
