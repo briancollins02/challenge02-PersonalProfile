@@ -143,4 +143,14 @@
     .menu-wrap {
         display: none;
     }
+
+    section {
+        margin: 0% 50px 30px 50px;
+    }
+}
+
+@media all and (max-width: 1023px) {
+    #desktop-nav {
+        display: none;
+    }
 }
