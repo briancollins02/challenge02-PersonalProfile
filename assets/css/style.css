@@ -15,6 +15,7 @@ html { font-family: 'Inter', sans-serif; }
  :root {
     --primary-color: #5BDB94;
     --secondary-color: #05396C;
+    --tertiary-color: #2D97FF;
  }
 
 /* Setting up the background color */
@@ -23,6 +24,14 @@ body {
     position: relative;
 }
 
+/* Nav Elements */
+.ghost-nav {
+    height: 72px;
+    background-color: none;
+    opacity: 0%;
+    position: relative;
+    top: -72px;
+}
 
 /* Header */
 header {
@@ -79,7 +88,7 @@ h1 {
     
 }
  /* Turn off link underline */
-#desktop-nav li a {
+#desktop-nav li a, #projects a {
     text-decoration: none;
 }
 
@@ -87,9 +96,22 @@ h1 {
 #load-up {
     height: 100vh;
     width: 100%;
-    display: hidden;
+    background-color: none;
+    color: var(--secondary-color);
     margin: 0px;
-    z-index: -999;
+    z-index: 1;
+    display: flex;
+    justify-content: start;
+
+}
+
+#load-up p {
+    margin-left: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    font-size: 5rem;
+    font-weight: 500;
+    align-items: flex-end;
 }
 
 /* Main Content */
@@ -102,6 +124,8 @@ main:after {
     height: 100vh;
     position:fixed;
     margin: auto;
+    background-position: center;
+    width:fit-content;
     left: 0;
     right: 0;
     top: 0;
@@ -110,15 +134,15 @@ main:after {
     justify-content: center;
     filter:grayscale(1);
     opacity: 50%;
-    z-index: -1
+    z-index: -999
 }
 
 /* Cards */
 main section {
-    overflow: hidden;
     display:block;
     margin: 0% 24px 30px 24px;
-    height: 300px;
+    padding: 10px;
+    height: fit-content;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -131,9 +155,14 @@ p {
     position: relative;
     top: 0;
     left: 0;
-    margin: 10px;
     z-index: 2;
     font-size: 1.3rem
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 /* About me card */
@@ -144,7 +173,7 @@ p {
 }
 
 /* Card Headers */
-h2 {
+.header {
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
@@ -171,6 +200,95 @@ h2 {
 a {
     color: inherit;
 }
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: start;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+    overflow: hidden;
+}
+/* Project 1 */
+
+
+.card0, .card, #project1 {
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    background-color: none;
+    padding: 0px;
+    border-radius: 10px; 
+    align-self: center;
+}
+
+.container {    
+    display: block;
+    align-items: space-between;
+    background-color: var(--tertiary-color);
+    padding: 5px 5px 5px 5px;
+    margin: 5px;
+    border-radius: 20px;
+    flex: 1 1 0;
+ }
+
+.sec-pro, .fir-pro {
+    margin: auto 0px auto 0px;
+    height: 100px;
+    width: 100%;
+    overflow:hidden;
+    border-radius: 20px;
+    outline-color: var(--tertiary-color);
+    outline-style: solid;
+}
+
+.fir-pro {
+    height: 200px;
+}
+
+.proj-pic {  
+    opacity: 50%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Mouse-hover on projects */
+.container:hover .proj-pic {
+    opacity: 100%;
+    transition-duration: 0.3s;
+}
+
+#first-day{
+    transform: translateY(0%)
+}
+
+
+h3 {
+    color: var(--primary-color);
+    width: fit-content;
+    background-color: none;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:block;
+    bottom: 50px;
+    z-index: 999;
+}
 
 /* Contact Card */
 #contact {
@@ -193,7 +311,72 @@ a {
 
 @media all and (min-width: 1024px) {
 
-    section {
-        margin: 0% 50px 30px 50px;
+
+    #picture, #content {
+        margin: auto;
+    }
+
+    #flex-respond {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    #picture {
+        height:inherit;
+        display: flex;
+        width: 20%;
+        margin-right: 20px;
+        justify-content: center;
+    }
+
+    #content {
+        height: 100%;
+        width: 50%;
+        margin-bottom: auto;
+        margin-top: auto;
+        padding-right: 30px;
+    }
+
+    #projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        margin: 0;
+        padding: 10px;
+    }
+
+    #contact {
+        margin: 0 16% 0 16%;
+    }
+
+    .card0 {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    #project1{
+        display: block;
+        height: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0px 0px 10px 5px;
+        
+    }
+
+    .card {
+        height: 100%;
+        justify-content: center;
     }
 }
+*/

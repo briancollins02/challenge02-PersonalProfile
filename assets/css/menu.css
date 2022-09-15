@@ -15,7 +15,7 @@
     align-items: center;
     width: 57px;
     height: 57px;
-    background-color: #2D97FF;
+    background-color: var(--tertiary-color);
     border-radius: 5px;
     border-width: 0px;
     margin: 7px;
@@ -26,7 +26,7 @@
 .hamburger div {
     width: 80%;
     height: 8px;
-    background-color: #05396C;
+    background-color: var(--secondary-color);
     border-radius: 4px;
     z-index: 2;
     transition: all 0.4s ease;

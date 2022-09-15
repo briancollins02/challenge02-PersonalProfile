@@ -22,10 +22,10 @@
             <div>
                 <div>
                     <ul id="nav-buttons">
-                        <li><a href="#about">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#nav-about">About</a></li>
+                        <li><a href="#nav-projects">Projects</a></li>
+                        <li><a href="#nav-contact">Contact</a></li>
                     </ul>
                 </div> 
             </div>
@@ -37,23 +37,69 @@
     </h1>
     <ul id="desktop-nav">
         <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#nav-about">About</a></li>
+        <li><a href="#nav-projects">Projects</a></li>
+        <li><a href="#nav-contact">Contact</a></li>
     </ul>
  </header>
 
- <div id="load-up"></div>
+ <div id="load-up">
+    <p>Hey there, Partner!</p>
+ </div>
  <div id="background" src="./assets/images/background.jpg"></div>
 <main>
-    <section id="picture">
-        <h2 class="header" id="about">About Me</h2>
-        <img src="./assets/images/Picture.jpg" alt="some bozo"> 
-        <div>
-            <p>Hey, I'm Brian! An aspiring web developer who recently moved out to the atlanta area. I'm looking to learn new skills and make <a href="#contact">new connections</a>. </p>
-        </div>
-    </section>
-    <section></section>
+    <div id="flex-respond">
+        <div id="nav-about" class="ghost-nav"></div>
+        <section id="picture">
+            <h2 class="header" id="about">About Me</h2>
+            <img src="./assets/images/Picture.jpg" alt="some bozo"> 
+            <div>
+                <p>Hey, I'm Brian! An aspiring web developer who recently moved out to the atlanta area. I'm looking to learn new skills and make <a href="#nav-contact">new connections</a>. </p>
+            </div>
+        </section>
+
+        <div id="nav-projects" class="ghost-nav"></div>
+        
+        <section id="content">
+            <h2 class="header">Projects</h2>
+            <div id="projects">
+                <div class="card0">
+                    <a href="https://briancollins02.github.io/prework-study-guide/">
+                        <div id="project1">
+                            <div class="container">
+                                <div class="fir-pro">
+                                    <img class="proj-pic" id="first-day" src="./assets/images/project1.png">
+                                </div>
+                                <h3 class="">First Project</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <section class="card">
+                    <a href="https://briancollins02.github.io/challenge01-Accessibility/">
+                        <div class="container">
+                            <div class="sec-pro">
+                                <img class="proj-pic" src="assets/images/project2.png">
+                            </div>
+                            <h3 class="">Semantic HTML</h3>
+                        </div>
+                    </a>
+                    <a href="https://3dwalterwhite.com/">
+                        <div class="container">
+                            <div class="sec-pro">
+                                <img class="proj-pic" id="walt" src="assets/images/project3.png">
+                            </div>
+                            <h3>Personal Project</h3>
+                        </div>
+                    </a>    
+                </section>
+            </div>
+        </section>
+    </div>
+
+    <div id="nav-contact" class="ghost-nav"></div>
+
     <section  id="contact"> 
         <h2 class="header">Contact</h2>
         <p>brianmcollins0@gmail.com</p>
