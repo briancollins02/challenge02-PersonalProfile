@@ -1,3 +1,4 @@
+/* contains all elements to do with the menu*/
 .menu-wrap {
     position: fixed; 
     right: 0px;
@@ -8,6 +9,7 @@
     z-index: 4;
 }
 
+/* hamburger button */
 .menu-wrap .hamburger {
     display: flex;
     flex-direction: column;
@@ -23,6 +25,7 @@
     transition: 0.2s ease-in-out;
 }
 
+/* Hamburger menu lines */
 .hamburger div {
     width: 80%;
     height: 8px;
@@ -34,6 +37,7 @@
     padding: 0px;
 }
 
+/* hamburger menu interactive button */
 .menu-wrap .toggler {
     position: absolute;
     margin: 0px;
@@ -71,7 +75,7 @@
 
 
 
-/* Interaction Show menu */
+    /* Interaction Show menu */
 .menu-wrap .toggler:checked ~ .menu {
     visibility: visible;
 }
@@ -86,7 +90,7 @@
     transition: opacity 0.4s ease
 }
 
-/* Menu display */
+    /* Menu display */
 .menu-wrap .menu {
     position: fixed;
     top: 0;
@@ -100,6 +104,7 @@
     justify-content: center;
 }
 
+/* green menu vp cover */
 .menu-wrap .menu > div {
     background: #5BDB94;
     border-radius: 50%;
@@ -115,6 +120,7 @@
     transition: all 0.4s ease;
 }
 
+/* holds nav list */
 .menu-wrap .menu > div > div {
     text-align: center;
     max-width: 90vw;
@@ -124,6 +130,7 @@
     transition: opacity 0.4s ease;
 }
 
+/* listed nav elements */
 .menu-wrap .menu > div > div > ul > li {
     list-style: none;
     color: #fff;
@@ -131,6 +138,7 @@
     padding: 1rem;
 }
 
+/* inline anchors within the nav elements */
 .menu-wrap .menu > div > div > ul > li > a {
     color: inherit;
     text-decoration: none;
@@ -149,6 +157,7 @@
     }
 }
 
+/* Hides desktop nav when on smaller devices */
 @media all and (max-width: 1023px) {
     #desktop-nav {
         display: none;

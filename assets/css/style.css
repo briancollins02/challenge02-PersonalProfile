@@ -20,28 +20,32 @@ html { font-family: 'Inter', sans-serif; }
 
 /* Setting up the background color */
 body {
-    background-color: var(--primary-color);
     position: relative;
+    background-color: var(--primary-color);
 }
 
-/* Nav Elements */
+/* Hidden Nav Targets */
 .ghost-nav {
+    position: relative;
+
     height: 72px;
     background-color: none;
     opacity: 0%;
-    position: relative;
+
     top: -72px;
 }
 
 /* Header */
 header {
+    position: fixed;
+  
     display:flex;
+
     justify-content:space-between;
     height: 144px;
     width: 150%;
     overflow-x: hidden;
     background-color: var(--secondary-color);
-    position: fixed;
     top: -72px;
     right:0;
     left: 0;
@@ -51,11 +55,12 @@ header {
 
 /* Header box shadow */
 header::after {
+    position: absolute;
+
     box-shadow: 0px 1px 10px #302446;
     content:"";
     height: 100%;
     overflow-x: hidden;
-    position: absolute;
     left: -50%;
     top: 100%;
     width: 200%;
@@ -64,16 +69,18 @@ header::after {
     
 /* Header Title */
 h1 {
-    height: 72px;
     position: relative;
+
+    height: 72px;
     left: 5px;
     top: 77px;
     font-size: 58px;
     font-weight:550;
-    color: #5BDB94;
+    color: var(--primary-color);
     z-index: 1;
 }
 
+/* Desktop Navigation Menu */
 #desktop-nav {
     position: fixed;
     display: flex;
@@ -87,31 +94,32 @@ h1 {
     right: 10px;
     
 }
- /* Turn off link underline */
+
+ /* Turn off nav-link underline */
 #desktop-nav li a, #projects a {
     text-decoration: none;
 }
 
 /* Spacer to create margin between content and header*/
 #load-up {
+    display: flex;
     height: 100vh;
     width: 100%;
     background-color: none;
     color: var(--secondary-color);
     margin: 0px;
-    z-index: 1;
-    display: flex;
+    z-index: 1; 
     justify-content: start;
-
 }
 
+/* 'Hey there Partner' */
 #load-up p {
+    display: flex;
+    align-items: flex-end;
     margin-left: 20px;
     margin-bottom: 100px;
-    display: flex;
     font-size: 5rem;
     font-weight: 500;
-    align-items: flex-end;
 }
 
 /* Main Content */
@@ -119,19 +127,19 @@ main {
     position: relative;
 }
 
+/* Page Background*/
 main:after {
     content: url(../../assets/images/background.jpg);
-    height: 100vh;
     position:fixed;
     margin: auto;
-    background-position: center;
-    width:fit-content;
     left: 0;
     right: 0;
     top: 0;
-    overflow: hidden;
     align-self: center;
     justify-content: center;
+    height: 100vh;
+    width:fit-content;  
+    overflow: hidden;
     filter:grayscale(1);
     opacity: 50%;
     z-index: -999
@@ -142,12 +150,12 @@ main section {
     display:block;
     margin: 0% 24px 30px 24px;
     padding: 10px;
+    border-radius: 10px;
     height: fit-content;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-size: 1.5rem;
     z-index: 1;
-    border-radius: 10px;
 }
 
 /* card text */
@@ -155,8 +163,8 @@ p {
     position: relative;
     top: 0;
     left: 0;
+    font-size: 1.3rem;
     z-index: 2;
-    font-size: 1.3rem
 }
 
 img {
@@ -166,7 +174,7 @@ img {
 }
 
 /* About me card */
-#picture {
+#about-me {
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -174,24 +182,24 @@ img {
 
 /* Card Headers */
 .header {
+    margin-top: 10px;
+    margin-bottom: 0;
     text-align: center;
     font-size: 2rem;
     font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 0;
 }
 
-/* Profile Picture*/
-#picture img {
-    align-self: center;
-    opacity: 40%;
+/* Profile Picture */
+#about-me img {
+    margin: 5%; 
     width: 300px;
     border-radius: 50%;
-    margin: 5%; 
+    align-self: center;
+    opacity: 40%;
 }
 
-
-#picture div p {
+/*  */
+#about-me div p {
     margin: 0 8% 8% 8%;
 
 }
@@ -200,13 +208,14 @@ img {
 a {
     color: inherit;
 }
-#content{
+
+#projects{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-#projects {
+#content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -220,7 +229,7 @@ a {
 /* Project 1 */
 
 
-.card0, .card, #project1 {
+.p1container, .p2container, #project1 {
     margin-left: auto;
     margin-right: auto;
     width:100%;
@@ -230,7 +239,7 @@ a {
     align-self: center;
 }
 
-.container {    
+.project-wrap {    
     display: block;
     align-items: space-between;
     background-color: var(--tertiary-color);
@@ -251,33 +260,39 @@ a {
 }
 
 .fir-pro {
-    height: 200px;
+    height: 250px;
+    outline: none;
 }
 
 .proj-pic {  
+    display: block;
     opacity: 50%;
     align-self: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0px;
-    display: block;
+    
     max-width: 100%;
     width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
 /* Mouse-hover on projects */
-.container:hover .proj-pic {
+.project-wrap:hover .proj-pic {
     opacity: 100%;
     transition-duration: 0.3s;
 }
 
+/* First Project image id */
 #first-day{
-    transform: translateY(0%)
+    height: 100%;
+    outline: none;
 }
 
-
+/* Previous works headings */
 h3 {
+    display:block;
     color: var(--primary-color);
     width: fit-content;
     background-color: none;
@@ -285,14 +300,14 @@ h3 {
     margin-right:auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    display:block;
     bottom: 50px;
     z-index: 999;
 }
 
 /* Contact Card */
 #contact {
-    height: fit-content;
+    height: min-content;
+    margin-bottom: 50px;
 }
 
 /* Email within contact bubble */
@@ -303,79 +318,123 @@ h3 {
 
 /* Contact Icons */
 #icons {
-    margin: 20px;
     display: flex;
+    margin: 20px;
+
     justify-content: space-evenly;
     font-size: 2rem;
 }
 
+
+/* Desktop layout media query */
 @media all and (min-width: 1024px) {
 
+    /* title -- move right*/
+    h1 {
+        margin-left: 2%;
+    }
 
-    #picture, #content {
+    /* nav menu -- move left*/
+    #desktop-nav {
+        margin-right: 2%;
+    }
+
+    /* Moves 'hey there partner' more towards the center of the page */
+    #load-up p {
+        margin-left: 9%;
+        font-size: 4rem;
+    }
+
+    /* Margin on about me and projects */
+    #about-me, #projects {
         margin: auto;
     }
 
+    /* Make the about me and project sections appear side by side */
     #flex-respond {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        
+        height: 100%;   
     }
 
-    #picture {
-        height:inherit;
+    /* resize and position about me */
+    #about-me {
         display: flex;
-        width: 20%;
-        margin-right: 20px;
+        height:500px;
+ 
+        width: 25%;
+        margin-right: 0px;
+        margin-left: auto;
         justify-content: center;
     }
 
-    #content {
-        height: 100%;
-        width: 50%;
+    /* rezise and position projects */
+    #projects {
+        max-height: 100%;
+        height: 500px;
+        width: min-content;
         margin-bottom: auto;
         margin-top: auto;
+        margin-left: 20px;
+        margin-right: auto;
         padding-right: 30px;
     }
 
-    #projects {
+    /* container for projects redirecting flex */
+    #content {
         display: flex;
         flex-direction: row;
         flex-wrap:nowrap;
-        margin: 0;
+        margin: auto;
         padding: 10px;
+        width: min-content;
     }
 
-    #contact {
-        margin: 0 16% 0 16%;
-    }
-
-    .card0 {
-        height: 100%;
+    /* make both project containers fit */
+    .p1container, .p2container{
         display: flex;
+        height: 100%;
+   
         align-items: center;
         justify-content: center;
-        margin: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+     
     }
 
+   
+    /* container for secondary projects */
+    .p2container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* project 1 card */
     #project1{
         display: block;
         height: 100%;
     }
 
-    .container {
+    /* redirects flex direction.
+        - wrap holding the primary and secondary project cards */
+    .project-wrap {
         display: flex;
+        width: max-content;
         flex-direction: column;
         flex-wrap: wrap;
-        margin: 0px 0px 10px 5px;
-        
+        margin: 0px 0px 10px 5px; 
     }
 
-    .card {
-        height: 100%;
-        justify-content: center;
+     /* resize contact card -- extend to edges*/
+    #contact {
+        margin: 0 0 0 0;
+        border-radius: 0px;
+        width: 100%;
+        padding-bottom: 20px;
     }
 }
+
+

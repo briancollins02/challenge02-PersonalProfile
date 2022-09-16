@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/menu.css">
-    <title>Portfolio</title>
+    <title>Brian C</title>
     <script src="https://kit.fontawesome.com/7a68f3df4f.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -48,25 +48,27 @@
  </div>
  <div id="background" src="./assets/images/background.jpg"></div>
 <main>
-    <div id="flex-respond">
-        <div id="nav-about" class="ghost-nav"></div>
-        <section id="picture">
+    <div id="flex-respond"> <!-- wrapper that changes flex direction depending on viewport-->
+        <div id="nav-about" class="ghost-nav"></div> <!--hidden nav target-->
+        <!-- About me card-->
+        <section id="about-me">
             <h2 class="header" id="about">About Me</h2>
             <img src="./assets/images/Picture.jpg" alt="some bozo"> 
             <div>
-                <p>Hey, I'm Brian! An aspiring web developer who recently moved out to the atlanta area. I'm looking to learn new skills and make <a href="#nav-contact">new connections</a>. </p>
+                <p>Hey, I'm Brian! An aspiring full-stack dev who recently moved out to the atlanta area. I'm looking to learn new skills and make <a href="#nav-contact">new connections</a>. </p>
             </div>
         </section>
 
-        <div id="nav-projects" class="ghost-nav"></div>
-        
-        <section id="content">
+        <div id="nav-projects" class="ghost-nav"></div> <!--hidden nav target-->
+        <!-- Previous Works Section -->
+        <section id="projects">
             <h2 class="header">Projects</h2>
-            <div id="projects">
-                <div class="card0">
+            <div id="content">
+                <!-- Card for first project -->
+                <div class="p1container">
                     <a href="https://briancollins02.github.io/prework-study-guide/">
                         <div id="project1">
-                            <div class="container">
+                            <div class="project-wrap">
                                 <div class="fir-pro">
                                     <img class="proj-pic" id="first-day" src="./assets/images/project1.png">
                                 </div>
@@ -75,10 +77,10 @@
                         </div>
                     </a>
                 </div>
-
-                <section class="card">
+                <!-- Card for other projects-->
+                <section class="p2container">
                     <a href="https://briancollins02.github.io/challenge01-Accessibility/">
-                        <div class="container">
+                        <div class="project-wrap">
                             <div class="sec-pro">
                                 <img class="proj-pic" src="assets/images/project2.png">
                             </div>
@@ -86,7 +88,7 @@
                         </div>
                     </a>
                     <a href="https://3dwalterwhite.com/">
-                        <div class="container">
+                        <div class="project-wrap">
                             <div class="sec-pro">
                                 <img class="proj-pic" id="walt" src="assets/images/project3.png">
                             </div>
@@ -97,25 +99,21 @@
             </div>
         </section>
     </div>
-
-    <div id="nav-contact" class="ghost-nav"></div>
-
+    <div id="nav-contact" class="ghost-nav"></div> <!--hidden nav target-->
+    <!-- Contact information section -->
     <section  id="contact"> 
         <h2 class="header">Contact</h2>
         <p>brianmcollins0@gmail.com</p>
         <div id="icons">
             <a href="https://www.instagram.com/briammcollins/">
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram"></i> <!-- Instagram -->
             </a>
             <a href='https://mail.google.com/mail/u/0/?hl=en&view=cm&tf=1&fs=1&to=brianmcollins0@gmail.com'>
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope"></i> <!-- E-mail -->
             </a>
         </div>
     </section>
 </main>
-
-<footer>
-</footer>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>
